@@ -7,7 +7,6 @@ var jenkins = require('jenkins')
 var ora = require('ora')
 
 var config = require('../lib/setting').config
-var handleError = require('../lib/util').handleError
 
 inquirer
   .prompt([
@@ -46,7 +45,7 @@ inquirer
       .job
       .create(answers.name, fs.readFileSync(configFile, 'utf8'), function (err) {
         if (err) {
-          handleError(err)
+          spinner.fail(err)
         } else {
           var jobUrl = new URL(`/job/${answers.name}`, config.baseUrl)
           spinner.succeed(`Created job for ${jobUrl}`)
