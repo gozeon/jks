@@ -1,0 +1,42 @@
+{
+  "name": "jks",
+  "version": "0.0.0",
+  "description": "jenkins api cli",
+  "bin": {
+    "jks": "./bin/jks.js"
+  },
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "commander": "^2.19.0",
+    "gozesay": "^0.0.1",
+    "inquirer": "^6.2.0",
+    "jenkins": "^0.23.0",
+    "mkdirp": "^0.5.1",
+    "ora": "^3.0.0",
+    "prettyjson": "^1.2.1",
+    "read-data": "^1.1.0",
+    "tableify": "^1.1.0",
+    "touch": "^3.1.0",
+    "write-data": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gozeon/jks.git"
+  },
+  "keywords": [
+    "jenkins",
+    "api",
+    "resuful",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gozeon/jks/issues"
+  },
+  "homepage": "https://github.com/gozeon/jks#readme"
+}
