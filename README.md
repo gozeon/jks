@@ -1,8 +1,12 @@
 # jks
 
-### Info
+### Init
 
-![info](/screenshot/init.gif)
+![init](/screenshot/init.gif)
+
+### create
+
+![create](/screenshot/create.gif)
 
 ### Build
 
