@@ -83,7 +83,10 @@ program
 
         spinner.start(`Loading jenkins config...`)
         writeData(configYml, answers, function (err) {
-          handleError(err)
+          if (err) {
+            spinner.fail(err)
+          }
+
           spinner.succeed(`Success jenkins config.`)
         })
       })
@@ -99,14 +102,14 @@ program
     if (config && config.fullUrl) {
       jenkins({ baseUrl: config.fullUrl, crumbIssuer: true }).info(function (err, data) {
         if (err) {
-          handleError(err)
+          spinner.fail(err)
         } else {
           spinner.succeed(`Get jenkins info.`)
           consoleJson(data)
         }
       })
     } else {
-      console.log(`Please run 'jks init'.`)
+      spinner.fail(`Please run 'jks init'.`)
     }
   })
 
